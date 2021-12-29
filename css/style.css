@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700,900&display=swap);
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #bebcbc;
+}
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 77.5rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/
+.page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.block-container {
+  display: flex;
+  align-items: center;
+}
+.block-container_style {
+  height: 450px;
+  background-color: paleturquoise;
+}
+
+.block-center-style {
+  width: 150px;
+  height: 150px;
+  background-color: orangered;
+}
+
+.block-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.center-block1 {
+  align-self: center;
+  max-width: 150px;
+  height: 150px;
+  background-color: orangered;
+}
+
+.block-container2 {
+  position: relative;
+}
+
+.center-block2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.block-container3 {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.center-block3 {
+  display: inline-block;
+}
+
+.table {
+  display: table;
+}
+
+.block-container4 {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.center-block4 {
+  display: inline-block;
+}
+
+.block-container5 {
+  padding: 1px;
+}
+
+.center-block5 {
+  margin: 150px 0;
+}
+
+.block-container6 {
+  line-height: 450px;
+  font-size: 0;
+}
+
+.center-block6 {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: medium;
+}
+
+.block-container7 {
+  position: relative;
+}
+
+.center-block7 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0px;
+}
+
+.block-container8 {
+  position: relative;
+}
+
+.center-block8 {
+  position: absolute;
+  top: 50%;
+  margin: -75px 0px 0px 0px;
+}
+
+.block-container9::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.center-block9 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block-container10 {
+  display: flex;
+}
+
+.center-block10 {
+  margin: auto 0;
+}
